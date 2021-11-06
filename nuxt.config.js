@@ -63,5 +63,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  router: {
+    base:
+      process.env.NODE_ENV === "development" ? process.env.BASE_URL : "/randomadviceapp/"
   }
 }
