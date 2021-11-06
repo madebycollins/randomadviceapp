@@ -2340,6 +2340,13 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@latest:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
+
 babel-loader@^8.2.2:
   version "8.2.3"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.3.tgz#8986b40f1a64cacfcb4b8429320085ef68b1342d"
@@ -4367,7 +4374,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.0:
+follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.4:
   version "1.14.5"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
@@ -6135,6 +6142,13 @@ nuxt-buefy@^0.4.8:
   integrity sha512-mld92vqY5uo+aQp4E8OnVE0abXPgf5t+k4ckmsMgYGfn0T3pDqJq7O4JLELxfBxfmBxmwce8lJ6ZaJ2GxCNaWQ==
   dependencies:
     buefy "^0.9.11"
+
+nuxt-vuex-localstorage@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/nuxt-vuex-localstorage/-/nuxt-vuex-localstorage-1.3.0.tgz#a73dc55a372e3bd0fa40f49c9dfacbc082376364"
+  integrity sha512-/+A8pouw/wxywk4pcoz/ZBWPKlVJsRq4wLhgvwGzyXzIIu/9axvzXVS8y5PGI5FxND/zQZUsomVfShLTkDqZuw==
+  dependencies:
+    axios latest
 
 nuxt@^2.15.7:
   version "2.15.8"
