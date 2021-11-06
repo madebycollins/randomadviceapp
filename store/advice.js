@@ -28,6 +28,15 @@ export const mutations = {
 }
 
 export const actions = {
+  clearAdviceList({ commit }) {
+    return new Promise((resolve, reject) => {
+      // Clear the advice
+      commit('CLEAR_ADVICE')
+
+      // Resolve the promise
+      resolve()
+    })
+  },
   getAdviceSlip({ rootState, commit }) {
     return new Promise((resolve, reject) => {
       // Get the advice from the API
