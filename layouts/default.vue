@@ -22,7 +22,7 @@
     </nav>
 
     <section class="main-content columns">
-      <aside class="column is-2 section">
+      <aside class="column is-3 section">
         <ul class="menu-list">
           <li
             v-for="(item, key) of items"
