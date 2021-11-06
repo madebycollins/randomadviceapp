@@ -10,11 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          <h1 class='title' style='color: white'>RandomAdviceApp</h1>
         </a>
 
         <div class="navbar-burger">
@@ -63,9 +59,14 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
+          title: 'Advice',
           icon: 'lightbulb',
           to: { name: 'inspire' }
+        },
+        {
+          title: 'History',
+          icon: 'view-dashboard',
+          to: { name: 'history' }
         }
       ]
     }
