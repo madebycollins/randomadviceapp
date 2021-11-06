@@ -1,15 +1,27 @@
 <template>
   <section class="section">
-    <h2 class="title is-3 has-text-grey">
-      "Just start  <b-icon
-        icon="rocket"
-        size="is-large"
-      />"
+    <h2 class="title is-3">
+      "{{ advice.advice }}"
     </h2>
-    <h3 class="subtitle is-6 has-text-grey">
-      Author: <a href="https://github.com/anteriovieira">
-        Antério Vieira
-      </a>
-    </h3>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'Advice',
+  data() {
+    return {
+      advice: {}
+    }
+  },
+  mounted() {
+    this.loadAdvice()
+  },
+  methods: {
+    async loadAdvice() {
+      // Get the advice
+      this.advice = await this.$store.dispatch('advice/getAdviceSlip')
+    }
+  }
+}
+</script>
