@@ -19,8 +19,16 @@ export default {
   },
   methods: {
     async loadAdvice() {
+      // Get the loading component
+      const loadingComponent = this.$buefy.loading.open({
+        container: null,
+      })
+
       // Get the advice
       this.advice = await this.$store.dispatch('advice/getAdviceSlip')
+
+      // Close the loading component
+      loadingComponent.close()
     }
   }
 }
