@@ -69,6 +69,11 @@ export default {
           to: { name: 'advice' }
         },
         {
+          title: 'Search',
+          icon: 'note',
+          to: { name: 'search' }
+        },
+        {
           title: 'History',
           icon: 'view-dashboard',
           to: { name: 'history' }
@@ -82,7 +87,7 @@ export default {
       // Clear the advice list
       await this.$store.dispatch('advice/clearAdviceList')
 
-      // Launch the toast
+      // Launch the snackbar
       this.$buefy.snackbar.open({
         message: 'Advice list has been cleared',
         type: 'is-warning',
