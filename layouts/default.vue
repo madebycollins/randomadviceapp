@@ -10,11 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          <h1 class='title'>RandomAdviceApp</h1>
         </a>
 
         <div class="navbar-burger">
@@ -26,10 +22,7 @@
     </nav>
 
     <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
+      <aside class="column is-3 section">
         <ul class="menu-list">
           <li
             v-for="(item, key) of items"
@@ -45,12 +38,18 @@
         </ul>
       </aside>
 
-      <div class="container column is-10">
+      <div class="container column is-9">
         <Nuxt />
       </div>
     </section>
   </div>
 </template>
+
+<style>
+.title {
+  color: white
+}
+</style>
 
 <script>
 export default {
@@ -63,9 +62,14 @@ export default {
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
+          title: 'Advice',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: { name: 'advice' }
+        },
+        {
+          title: 'History',
+          icon: 'view-dashboard',
+          to: { name: 'history' }
         }
       ]
     }
