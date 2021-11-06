@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'randomadvice',
+    title: 'RandomAdviceApp',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -47,7 +47,12 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    https: process.env.NODE_ENV === 'production', // Enforce HTTPS in production
+    progress: true,
+    baseURL:'https://api.adviceslip.com/',
+    browserBaseURL: 'https://api.adviceslip.com/',
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -58,5 +63,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  router: {
+    base:
+      process.env.NODE_ENV === "development" ? process.env.BASE_URL : "/randomadviceapp/"
   }
 }
