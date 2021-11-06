@@ -1,5 +1,9 @@
 <template>
-<h1> {{ advice.advice }} </h1>
+  <section class='section'>
+    <h2 class='title is-3'>
+      "{{ advice.advice }}"
+    </h2>
+  </section>
 </template>
 
 <script>
@@ -15,11 +19,11 @@ export default {
     this.loadAdviceById()
   },
   methods: {
-    async loadAdviceById(){
+    async loadAdviceById() {
       // Get the advice
       this.advice = await this.$store.dispatch('advice/getAdviceSlipById', this.adviceId)
     }
-  },
+  }
 }
 </script>
 
