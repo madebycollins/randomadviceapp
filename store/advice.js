@@ -85,6 +85,9 @@ export const actions = {
 
     return new Promise((resolve, reject) => {
 
+      // Trim the string
+      adviceTopic = adviceTopic.trim()
+
       // Get the advice from the API
       this.$axios.$get('/advice/search/' + adviceTopic).then(function (response) {
 
