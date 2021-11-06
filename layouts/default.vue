@@ -64,7 +64,7 @@ export default {
         {
           title: 'Advice',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: { name: 'advice' }
         },
         {
           title: 'History',
