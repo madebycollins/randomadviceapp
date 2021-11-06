@@ -6,6 +6,8 @@
     <p>Built with <a href="https://nuxtjs.org/">Nuxt.js</a>, <a href="https://vuejs.org/">Vue.js</a> and <a href="http://bulma.io/">Bulma</a></p>
     <br/>
     <p>Open source on <a href="https://github.com/madebycollins/randomadviceapp">GitHub</a></p>
+    <br/>
+    <p>Click <NuxtLink :to="'advice'">Advice</NuxtLink> to get some random advice</p>
   </section>
 </template>
 
