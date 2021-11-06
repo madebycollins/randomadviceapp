@@ -35,6 +35,8 @@
               <b-icon :icon="item.icon" /> {{ item.title }}
             </NuxtLink>
           </li>
+          <br/>
+          <a @click='clearAdviceList'><b-icon :icon="'delete-outline'" /> Reset</a>
         </ul>
       </aside>
 
@@ -72,6 +74,20 @@ export default {
           to: { name: 'history' }
         }
       ]
+    }
+  },
+  methods: {
+    async clearAdviceList(){
+
+      // Clear the advice list
+      await this.$store.dispatch('advice/clearAdviceList')
+
+      // Launch the toast
+      this.$buefy.snackbar.open({
+        message: 'Advice list has been cleared',
+        type: 'is-warning',
+        position: 'is-top',
+      })
     }
   }
 }
