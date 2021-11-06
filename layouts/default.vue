@@ -10,7 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <h1 class='title' style='color: white'>RandomAdviceApp</h1>
+          <h1 class='title'>RandomAdviceApp</h1>
         </a>
 
         <div class="navbar-burger">
@@ -44,6 +44,12 @@
     </section>
   </div>
 </template>
+
+<style>
+.title {
+  color: white
+}
+</style>
 
 <script>
 export default {
