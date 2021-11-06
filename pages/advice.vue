@@ -3,6 +3,7 @@
     <h2 class="title is-3">
       "{{ advice.advice }}"
     </h2>
+    <button class='button is-primary' @click='loadAdvice'>Another one!</button>
   </section>
 </template>
 
