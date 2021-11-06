@@ -80,5 +80,43 @@ export const actions = {
         resolve(adviceObject)
       })
     })
+  },
+  getAdviceSlipByTopic({ rootState, commit, getters }, adviceTopic){
+
+    return new Promise((resolve, reject) => {
+
+      // Get the advice from the API
+      this.$axios.$get('/advice/search/' + adviceTopic).then(function (response) {
+
+        if (response.total_results) {
+          // Isolate the advice
+          const adviceList = response.slips;
+
+          //  Store the advice if
+          adviceList.forEach(function(advice){
+            // Isolate data
+            const obj = {
+              id: advice.id,
+              advice: advice.advice
+
+            }
+
+            // Add advice object to the state
+            commit('ADD_ADVICE', obj)
+          })
+
+          // Resolve the promise
+          resolve(adviceList)
+        } else {
+          // Create an empty list
+          const adviceList = [];
+
+          // Resolve the list
+          resolve(adviceList)
+        }
+
+
+      })
+    })
   }
 }
