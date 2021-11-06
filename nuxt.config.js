@@ -47,7 +47,12 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    https: process.env.NODE_ENV === 'production', // Enforce HTTPS in production
+    progress: true,
+    baseURL:'https://api.adviceslip.com/',
+    browserBaseURL: 'https://api.adviceslip.com/',
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
