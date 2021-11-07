@@ -1,6 +1,6 @@
 <template>
   <section class='section'>
-    <h2 v-for='advice in adviceList' :key="advice.id" class='title is-3'>
+    <h2 v-for='advice in computedAdviceHistory' :key="advice.id" class='title is-3'>
       "{{ advice.advice }}"
     </h2>
   </section>
@@ -14,8 +14,14 @@ export default {
       adviceList: {}
     }
   },
+  computed: {
+    computedAdviceHistory() {
+      // Get the advice
+      return  this.$store.getters['advice/getAdviceList']
+    }
+  },
   mounted() {
-    this.loadAdviceHistory()
+    // this.loadAdviceHistory()
   },
   methods: {
     async loadAdviceHistory() {
